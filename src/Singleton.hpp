@@ -25,6 +25,15 @@ public:
 	
 		return msInstance;
 	}
+	
+	static void destroyInstance()
+  {
+    if(msInstance != 0)
+    {
+      delete msInstance;
+      msInstance = 0;
+    }
+  }
 
 	virtual ~Singleton()
 	{
